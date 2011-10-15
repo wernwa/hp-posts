@@ -1,6 +1,19 @@
 <!--couchdb db=physik04-->
 <!--couchdb tags=links-->
 
+<i> Webcam Physik Hochhaus Karlsruhe </i> <a onclick="reload_webcam('webcam_hochhaus'); return false;">[reload]</a>
+
+<div>
+
+<!--    <iframe src="http://www.panoramablick.com/partner_sites/partner.php?cid=1266&nav_id=207&kat_id=1610&l=en" width="600" heig
+ht="600" scrolling="no" frameborder=0 ></iframe>
+-->
+        <img id="webcam_hochhaus" src="http://imkbemu.physik.uni-karlsruhe.de/~ws_uni/plots/WEBCAM/chillcam4.jpg" alt="Webcam am P
+hysik-Hochhaus" />
+
+</div>
+
+<br>
 
 <i> Webcam Physik Hochhaus Karlsruhe </i> <a onclick="reload_webcam('webcam_marktplatz'); return false;">[reload]</a>
 <div id="webcam_marktplatz">
@@ -9,14 +22,6 @@
 
 </div>
 
-<br>
-<i> Webcam Physik Hochhaus Karlsruhe </i> <a onclick="reload_webcam('webcam_hochhaus'); return false;">[reload]</a>
-
-<div id="webcam_hochhaus">
-
-	<iframe src="http://www.panoramablick.com/partner_sites/partner.php?cid=1266&nav_id=207&kat_id=1610&l=en" width="600" height="600" scrolling="no" frameborder=0 ></iframe>
-
-</div>
 
 <script type="text/javascript" charset="utf-8">
 
@@ -25,11 +30,11 @@ function reload_webcam(id){
 	var timestamp = new Date().getTime();
 	if (id=='webcam_marktplatz'){
 		$("#"+id).html('<img border="0" style="width: 515px;" src="http://service.ka-news.de/camimage.php?cam=0&forbrowsercacheavoid42='+timestamp+'" alt="Webcam am Marktplatz" />');
-	}else{
-		 if (id=='webcam_hochhaus'){
-			$("#"+id).html('<iframe src="http://www.panoramablick.com/partner_sites/partner.php?cid=1266&nav_id=207&kat_id=1610&l=en&forbrowsercacheavoid42='
-							+timestamp+' width="600" height="600" scrolling="no" frameborder=0  ></iframe>');
-		 }
+	}
+
+	if (id=='webcam_hochhaus'){
+	  //$("#"+id).attr('src','http://service.ka-news.de/camimage.php?cam=2&forbrowsercacheavoid='+timestamp);
+	  $('#'+id).attr('src','http://imkbemu.physik.uni-karlsruhe.de/~ws_uni/plots/WEBCAM/chillcam4.jpg?&avoidcache='+timestamp);	 
 	}
 
 }
