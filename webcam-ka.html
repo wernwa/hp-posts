@@ -1,26 +1,6 @@
 <!--couchdb db=physik04-->
 <!--couchdb tags=links-->
 
-<i> Webcam Physik Hochhaus Karlsruhe </i> <a onclick="reload_webcam('webcam_hochhaus'); return false;">[reload]</a>
-
-<div>
-
-<!--    <iframe src="http://www.panoramablick.com/partner_sites/partner.php?cid=1266&nav_id=207&kat_id=1610&l=en" width="600" heig
-ht="600" scrolling="no" frameborder=0 ></iframe>
--->
-        <img id="webcam_hochhaus" src="http://imkbemu.physik.uni-karlsruhe.de/~ws_uni/plots/WEBCAM/chillcam4.jpg" alt="Webcam am P
-hysik-Hochhaus" />
-
-</div>
-
-<br>
-
-<i> Webcam Physik Hochhaus Karlsruhe </i> <a onclick="reload_webcam('webcam_marktplatz'); return false;">[reload]</a>
-<div id="webcam_marktplatz">
-
-	<img border="0" style="width: 515px;" src="http://service.ka-news.de/camimage.php?cam=0" alt="Webcam am Marktplatz" />
-
-</div>
 
 
 <script type="text/javascript" charset="utf-8">
@@ -36,9 +16,50 @@ function reload_webcam(id){
 	  //$("#"+id).attr('src','http://service.ka-news.de/camimage.php?cam=2&forbrowsercacheavoid='+timestamp);
 	  $('#'+id).attr('src','http://imkbemu.physik.uni-karlsruhe.de/~ws_uni/plots/WEBCAM/chillcam4.jpg?&avoidcache='+timestamp);	 
 	}
+	if (id=='webcam_mensa1'){
+	  $('#'+id).attr('src','http://www.studentenwerk-karlsruhe.de/layout/mensaCamPic1.jpg?&avoidcache='+timestamp); 
+	}
+        if (id=='webcam_mensa2'){
+          $('#'+id).attr('src','http://www.studentenwerk-karlsruhe.de/layout/mensaCamPic2.jpg?&avoidcache='+timestamp);
+        }
+
 
 }
+</script>
 
 
 
-  </script>  
+<i> Webcam Physik Hochhaus Karlsruhe </i> <a onclick="reload_webcam('webcam_hochhaus'); return false;">[reload]</a>
+
+<div>
+
+<!--    <iframe src="http://www.panoramablick.com/partner_sites/partner.php?cid=1266&nav_id=207&kat_id=1610&l=en" width="600" heig
+ht="600" scrolling="no" frameborder=0 ></iframe>
+-->
+        <img id="webcam_hochhaus" src="http://imkbemu.physik.uni-karlsruhe.de/~ws_uni/plots/WEBCAM/chillcam4.jpg" alt="Webcam am P
+hysik-Hochhaus" />
+
+</div>
+
+<br>
+
+<i> Webcam MensaI </i> <a onclick="reload_webcam('webcam_mensa1'); return false;">[reload] | </a> Webcam Mensa II </i> <a onclick="reload_webcam('webcam_mensa2'); return false;">[reload] </a>
+<div>
+
+        <img id="webcam_mensa1" border="0"  src="http://www.studentenwerk-karlsruhe.de/layout/mensaCamPic1.jpg" alt="Webcam KIT Mensa I" />
+ 	<img id="webcam_mensa2" border="0"  src="http://www.studentenwerk-karlsruhe.de/layout/mensaCamPic2.jpg" alt="Webcam KIT Mensa II" />
+
+
+</div>
+
+<br>
+
+
+<i> Webcam Physik Hochhaus Karlsruhe </i> <a onclick="reload_webcam('webcam_marktplatz'); return false;">[reload]</a>
+<div id="webcam_marktplatz">
+
+	<img border="0" style="width: 515px;" src="http://service.ka-news.de/camimage.php?cam=0" alt="Webcam am Marktplatz" />
+
+</div>
+
+
